@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        let a = document.querySelector('.container')
+        fetch('https://express-backend-ymom.onrender.com/about')
+        .then(response => response.text())
+        .then(data => {
+            a.innerHTML = data
+        })
+        .catch(err => console.error(err))
+    </script>
+</body>
+</html>
